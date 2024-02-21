@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "SimpleEmailApp.Controllers.EmailController",
+    "Method": "Register",
+    "RelativePath": "api/Email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SimpleEmailApp.Controllers.RegistrationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
