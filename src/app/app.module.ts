@@ -7,18 +7,29 @@ import { RegisterComponent } from './components/register/register.component';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationSuccessComponent } from './components/registration-success/registration-success.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ResetCredentialsFormComponent } from './components/reset-credentials-form/reset-credentials-form.component';
 
+const routes: Routes = [
+  { path: '', component: RegisterComponent },
+  { path: 'success', component: RegistrationSuccessComponent },
+  {path:'reset-credentials',component:ResetCredentialsFormComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    RegistrationSuccessComponent,
+    ResetCredentialsFormComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
