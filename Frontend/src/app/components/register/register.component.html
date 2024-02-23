@@ -1,0 +1,17 @@
+<!-- registration.component.html -->
+<div class="container">
+  <form (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+    <label for="email">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="formData.password" required>
+  
+    <!-- Add other registration fields as needed -->
+  
+    <button type="submit">Register</button>
+  </form>
+  
+</div>
