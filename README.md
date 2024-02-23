@@ -53,3 +53,5 @@ The backend of the project is developed using .NET framework.
 
 - Make sure both the frontend and backend servers are running simultaneously to utilize the full functionality of the application.
 
+# Sample Video:
+<video src = "https://github.com/Rahul-Maity/email-notification-feature/assets/113348978/82885d89-3ef4-4d83-b726-9b7b8743aa9b"> </video>
