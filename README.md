@@ -1,51 +1,55 @@
-# Email Notification Feature POC
+## Email Notification Feature
 
-## Objective
-The objective of this project is to create a proof of concept (POC) for an email notification feature within an application. This feature will enable the application to send automated emails to users under specified conditions, such as registration confirmation and password reset.
+This repository contains the frontend and backend components of email notification feature
 
-## Background
-Email notifications play a crucial role in user engagement and communication strategy in web applications. This POC aims to demonstrate the capability to dynamically generate and send emails to users based on specific triggers within the application.
+### Frontend (Angular)
 
-## Requirements
-- Research and select an email delivery service or SMTP server (e.g., SendGrid, Amazon SES, SMTP).
-- Implement a mechanism to trigger email notifications under predefined conditions.
-- Ensure the solution supports dynamic content in emails, such as personalized user information.
-- Design email templates for at least two scenarios (e.g., welcome email, password reset).
-- Implement proper error handling and logging for email delivery status.
+The frontend of the project is developed using Angular framework.
 
-## Resources
-- Documentation for the chosen email delivery service or SMTP server.
-- Access to development tools and libraries necessary for email integration.
+### Prerequisites
 
-## Tasks Breakdown
+- Node.js and npm installed. You can download and install Node.js from [here](https://nodejs.org/).
+- Angular CLI installed globally. You can install it via npm by running:
+- npm install -g @angular/cli
+### Running the Frontend
 
-### Research and Setup
-- Evaluate different email delivery services or SMTP servers to find the most appropriate for the project's needs.
-- Set up an account with the selected service and configure it for use in the project.
+1. Navigate to the 'frontend' directory:
+- cd frontend
 
-### Email Trigger Mechanism Development
-- Develop the logic to trigger emails based on specific application events (e.g., new user registration, request for password reset).
-- Integrate the trigger mechanism with the email delivery service's API or SMTP server.
+2. Install dependencies:
+- npm install
 
-### Email Content and Template Creation
-- Design and create email templates for different notification scenarios, ensuring they are responsive and user-friendly.
-- Implement functionality to dynamically populate the templates with content specific to each user and scenario.
+3. Start the development server:
+- ng serve
 
-### Testing and Validation
-- Test the email notification feature thoroughly to ensure reliability and accuracy in various scenarios.
-- Validate the responsiveness and appearance of email templates across different email clients and devices.
+4. Open your browser and navigate to `http://localhost:4200/` to view the frontend.
 
-### Documentation
-- Document the configuration process for the email delivery service or SMTP server.
-- Provide detailed instructions on how to create and modify email templates.
-- Outline the process for integrating new triggers for email notifications.
+## Backend (.NET)
 
-### Presentation
-- Prepare a demonstration of the email notification feature, showing the trigger mechanism and the received emails for different scenarios.
-- Highlight any challenges encountered during the development process and how they were addressed.
+The backend of the project is developed using .NET framework.
 
-## Deliverables
-- Source code for the email notification feature.
-- Email templates for different notification scenarios.
-- Documentation on the setup, configuration, and usage of the feature.
-- A live demonstration of the feature to the team.
+### Prerequisites
+
+- .NET SDK installed. You can download and install .NET SDK from [here](https://dotnet.microsoft.com/download).
+- Visual Studio or Visual Studio Code (optional but recommended) for IDE.
+
+### Running the Backend
+
+1. Navigate to the 'backend' directory:
+- cd backend
+
+2. Restore NuGet packages and dependencies:
+- dotnet restore
+
+3. Build the project:
+- dotnet build
+
+4. Run the project:
+- dotnet run
+
+5. The backend server should now be running at `http://localhost:5000/`.
+
+## Additional Notes
+
+- Make sure both the frontend and backend servers are running simultaneously to utilize the full functionality of the application.
+
