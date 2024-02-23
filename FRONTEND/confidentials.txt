@@ -1,0 +1,79 @@
+2D7B8E25754B0276E82B207833E736D1B5CA
+
+
+
+api-key = 718BED00E5AEB6E524AF6A3885437FDB73DF89C8B2643D47BFB690A7FFF6701ABEAEFFB98172F68204BF128977359C26
+
+
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace SimpleEmailApp.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class WeatherForecastController : ControllerBase
+    {
+        private static readonly string[] Summaries = new[]
+        {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
+        private readonly ILogger<WeatherForecastController> _logger;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        {
+            _logger = logger;
+        }
+
+        [HttpGet(Name = "GetWeatherForecast")]
+        public IEnumerable<WeatherForecast> Get()
+        {
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
+    }
+}
